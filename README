@@ -1,0 +1,4 @@
+deployed to heroku
+
+push to heroku with
+`git push heroku master`
