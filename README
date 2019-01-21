@@ -1,4 +1,6 @@
-deployed to heroku
+Node server currently deployed to heroku
 
 push to heroku with
 `git push heroku master`
+
+`npm dev start` runs concurrance and starts both node and react local servers for development 
