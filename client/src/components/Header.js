@@ -12,7 +12,7 @@ class Header extends Component {
         )
       default:
         return(
-          <li><a href="#">Logout</a></li>
+          <li><a>Logout</a></li>
         );
     }
   }
@@ -20,7 +20,7 @@ class Header extends Component {
     return (
       <nav>
         <div className="nav-wrapper">
-          <a href="#" className="left brand-logo">Emaily</a>
+          <a className="left brand-logo">Emaily</a>
           <ul id="nav-mobile" className="right">
             {this.renderContent()}
           </ul>
