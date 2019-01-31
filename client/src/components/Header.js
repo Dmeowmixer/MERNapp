@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import {connect} from 'react-redux';
 import {Link} from 'react-router-dom'
 import Payments from './Payments.js'
+
 class Header extends Component {
   renderContent() {
     switch( this.props.auth ){
@@ -9,7 +10,7 @@ class Header extends Component {
         return;
       case false:
         return <li><a href="/auth/google">Login With Google</a></li>;
-      default: 
+      default:
         return [
           <li key="1"><Payments /></li>,
           <li key="3" style={{margin: '0 10px'}}>Credits:{this.props.auth.credits}</li>,
@@ -23,7 +24,7 @@ class Header extends Component {
       <nav>
         <div className="nav-wrapper">
           <Link to={this.props.auth ? '/surveys' : '/'} className="left brand-logo">Emaily</Link>
-          <ul id="nav-mobile" className="right">
+          <ul className="right">
             {this.renderContent()}
           </ul>
         </div>
