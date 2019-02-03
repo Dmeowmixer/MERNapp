@@ -4,3 +4,7 @@ push to heroku with
 `git push heroku master`
 
 `npm dev start` runs concurrance and starts both node and react local servers for development 
+
+#To Do
+Fix credit display error. (Believed to be MongoDB authentication failure)
+ - Stripe API hit goes through, however credits not updated.
