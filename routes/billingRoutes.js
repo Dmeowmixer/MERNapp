@@ -12,7 +12,9 @@ module.exports = app => {
       description: '$5 for 5 credits',
       source: req.body.id
     });
+
     req.user.credits += 5;
+    console.log('billingRoutes', req.user, charge);
     const user = await req.user.save();
     res.send(user);
   });

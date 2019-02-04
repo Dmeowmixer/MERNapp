@@ -7,7 +7,6 @@ module.exports = app => {
   );
 
   app.get('/auth/google/callback', passport.authenticate('google'), (req, res) => {
-    //to homepage(gp)
     res.redirect('/surveys');
   });
 
@@ -17,6 +16,7 @@ module.exports = app => {
   });
 
   app.get('/api/current_user', (req, res) => {
+    console.log('authRoutes currentuser',req.user)
     res.send(req.user);
   });
 }
